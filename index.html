@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>STARTUP</title>
+<meta name="description" content="Launch an AI startup. With its own token. One sentence becomes a company, an AI founder and a coin on pump.fun.">
+<meta property="og:title" content="STARTUP">
+<meta property="og:description" content="Launch an AI startup. With its own token. One sentence becomes a company, an AI founder and a coin on pump.fun.">
+<meta property="og:image" content="https://startup-pad.vercel.app/assets/og.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://startup-pad.vercel.app/assets/og.png">
+<meta name="theme-color" content="#0D0E10">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/fav-32.png">
+<link rel="apple-touch-icon" href="/assets/fav-180.png">
+<link rel="preload" href="/assets/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/su.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"><i></i></div>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="/" aria-label="STARTUP home"><img src="/assets/mark-lime.svg" alt="" width="30" height="25">STARTUP</a>
+  <nav id="menu" aria-label="Main"><a href="/launch">Launch</a><a href="/startups">Demo Day</a><a href="/studio">Studio</a><a href="/docs">Docs</a></nav>
+  <div class="right"><a class="btn lime sm" href="/launch">Launch a startup</a><button class="btn sm menu" type="button" aria-controls="menu" aria-expanded="false">Menu</button></div>
+</div></header>
+<main id="main">
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="pill lime"><span class="dot on"></span>Live · AI startups on pump.fun</span>
+    <h1 id="h1"><span data-rise>Launch an AI startup.</span><span class="l2" data-rise>With its own token.</span></h1>
+    <p class="powered">Powered by <a href="https://x.com/higgsfield_ai" target="_blank" rel="noopener">@higgsfield_ai</a></p>
+    <p class="lede">Describe it in one sentence. An AI builds the company, the founder and the pitch. You launch its coin on pump.fun from your own wallet.</p>
+    <form class="idea" id="ideaForm" autocomplete="off"><label class="sr" for="idea">Describe your startup in one sentence</label><input id="idea" maxlength="200" placeholder="Describe your startup in one sentence"><button class="btn lime" type="submit">Build it <span class="arrow">→</span></button></form>
+    <div class="chips" id="ideaChips" aria-label="Example ideas"></div>
+    <div class="trust"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>Your wallet, your coin</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>Fee split locked on-chain</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>Founder films with Higgsfield</span></div>
+    <div class="livebar"><span class="pill"><span class="dot" id="lDot"></span><b id="lpm">—</b>&nbsp;new pump.fun coins in the last minute</span><span class="pill"><b id="nStart">—</b>&nbsp;startups on STARTUP</span></div>
+  </div>
+  <div class="stage" id="stage"><canvas aria-label="The STARTUP token, spinning"></canvas>
+    <div class="float f1">One sentence<b>→ a startup</b></div>
+    <div class="float f2">Fee split<b>30 · 35 · 35</b></div>
+    <div class="float f3">Founder<b>AI · on camera</b></div>
+  </div>
+</div></section>
+<div class="strip" id="live" aria-label="New on STARTUP"><span class="lbl"><span class="pill" style="padding:0;border:0;background:none"><span class="dot on"></span></span>New on STARTUP</span><div id="liveTrack"><div class="empty">Loading launches…</div></div></div>
+
+<section class="band " id="how"><div class="wrap">
+  <div class="head"><div><span class="kicker reveal">01 — How it works</span><h2 class="reveal">Three clicks.<span class="l2">No pitch deck.</span></h2></div><p class="reveal d1">The fastest way from a shower thought to a company with a coin, a founder and a page.</p></div>
+  <div class="grid g3 steps">
+  <div class="card hover step reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 20h4L19 9l-4-4L4 16z"/></svg></span><span class="n">01</span><h3>Describe it</h3><p>One sentence. “Tinder for houseplants” is enough. The AI writes the company, the pitch and the founder.</p></div>
+  <div class="card hover step reveal d1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M7 4v16M17 4v16M3 9h18M3 15h18"/></svg></span><span class="n">02</span><h3>Name = ticker</h3><p>Your startup's name becomes its coin. Edit anything, swap the logo, reshoot the founder.</p></div>
+  <div class="card hover step reveal d2"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 19c4-1 6-3 7-6M12 13l7-7M19 6v5M19 6h-5"/></svg></span><span class="n">03</span><h3>Launch it</h3><p>One approval in your wallet. The coin goes live on pump.fun and the fee split locks on-chain.</p></div>
+</div>
+</div></section>
+<section class="band " id="kit"><div class="wrap">
+  <div class="head"><div><span class="kicker reveal">02 — What the AI builds</span><h2 class="reveal">One sentence in.<span class="l2">A startup out.</span></h2></div><p class="reveal d1">Name and ticker, tagline, a three-line pitch and a fictional AI founder. This is the real engine. Try it.</p></div>
+  <div class="kitbox">
+  <form class="card kitform reveal" id="kitForm" autocomplete="off">
+    <label class="sr" for="kitIdea">Your one sentence</label>
+    <textarea id="kitIdea" maxlength="200" placeholder="e.g. An AI that negotiates your rent while you sleep"></textarea>
+    <div class="row"><button class="btn lime" type="submit" id="kitGo">Build the startup <span class="arrow">→</span></button><span class="err" id="kitErr" role="alert"></span></div>
+    <p class="muted" style="margin:14px 0 0;font-size:14px">Nothing launches here. You review everything on the launch page first.</p>
+  </form>
+  <div class="card kitcard reveal d1" id="kitCard" aria-live="polite"></div>
+</div>
+</div></section>
+<div class="strip ideas" aria-hidden="true"><div class="track" id="ideaTrack"></div></div>
+
+<section class="band " id="founder"><div class="wrap">
+  <div class="head"><div><span class="kicker reveal">03 — The founder</span><h2 class="reveal">Every startup gets<span class="l2">an AI founder.</span></h2></div><p class="reveal d1">A photoreal founder with a name, a bio and a voice. On the startup page they react to every trade, live, in character. Labelled AI, always.</p></div>
+  <div class="founderbox">
+  <div class="card reveal"><div class="sec-t"><h3>Founder feed</h3><span class="ai-tag">AI · example founder</span></div><div class="feed" id="homeFeed" aria-live="polite"></div>
+    <div class="row" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px"><button class="btn sm lime" type="button" data-say="pitch">Ask for the pitch</button><button class="btn sm" type="button" data-say="big">Someone buys 5 SOL</button><button class="btn sm" type="button" data-say="dump">The chart goes red</button></div></div>
+  <div class="grid g2 reveal d1" style="align-content:start">
+    <div class="card"><h3>Has a face</h3><p class="muted" style="margin:10px 0 0">A studio headshot made for this one founder. Same face in every video.</p></div>
+    <div class="card"><h3>Has a voice</h3><p class="muted" style="margin:10px 0 0">The bio and voice you approve steer every line they write.</p></div>
+    <div class="card"><h3>Reads the chart</h3><p class="muted" style="margin:10px 0 0">Live trades from pump.fun feed the founder's reactions.</p></div>
+    <div class="card"><h3>Never shills</h3><p class="muted" style="margin:10px 0 0">No advice, no price talk, no promises. Hard rules in every prompt.</p></div>
+  </div>
+</div>
+</div></section>
+<section class="band " id="studio"><div class="wrap">
+  <div class="head"><div><span class="kicker reveal">04 — Studio</span><h2 class="reveal">Your founder<span class="l2">films the content.</span></h2></div><p class="reveal d1">Ten formats made with Higgsfield from the founder headshot. Only the founder wallet can order, and you decide what gets posted.</p></div>
+  <div class="row" style="margin:-20px 0 22px"><span class="pill" id="engine"><span class="dot"></span>Checking the video engine…</span></div>
+<div class="grid g5" id="fmtGrid"></div>
+</div></section>
+<section class="band " id="rounds"><div class="wrap">
+  <div class="head"><div><span class="kicker reveal">05 — Funding rounds</span><h2 class="reveal">Garage to unicorn,<span class="l2">read live from the chart.</span></h2></div><p class="reveal d1">Every startup climbs the same four rounds. Its page shows where it is right now, and the office it films in upgrades with each round.</p></div>
+  <div class="ladder" id="ladder"></div>
+</div></section>
+<section class="band " id="fees"><div class="wrap">
+  <div class="head"><div><span class="kicker reveal">06 — Fees</span><h2 class="reveal">Every startup has<span class="l2">a burn rate.</span></h2></div></div>
+  <div class="fees">
+  <div class="donut reveal" id="donut"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="48" stroke="#1C1E21"/><circle id="dBurn" cx="60" cy="60" r="48" stroke="#D1FE17" stroke-dasharray="0 302"/><circle id="dRun" cx="60" cy="60" r="48" stroke="#9FBF12" stroke-dasharray="0 302"/><circle id="dFnd" cx="60" cy="60" r="48" stroke="#F7F7F8" stroke-dasharray="0 302"/></svg><div class="mid"><div><b>100%</b><span>of creator fees</span></div></div></div>
+  <div class="grid">
+    <div class="card share reveal"><span class="sw" style="background:#D1FE17"></span><div><b>Burn rate</b><p>Buys $STARTUP on the market and burns it, every payout.</p></div><span class="pct lime">30%</span></div>
+    <div class="card share reveal d1"><span class="sw" style="background:#9FBF12"></span><div><b>Runway</b><p>Pays for that startup's own Studio videos. Nothing else.</p></div><span class="pct">35%</span></div>
+    <div class="card share reveal d2"><span class="sw" style="background:#F7F7F8"></span><div><b>Founder</b><p>Goes to the wallet that launched the startup.</p></div><span class="pct">35%</span></div>
+    <div class="locknote reveal d3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Set with pump.fun's own fee sharing inside the launch, and the admin is revoked in that same transaction. Nobody can change it afterwards, not the founder and not us. Anyone can press <b>Pay out</b> on a startup page to send its fees to the three wallets.</span></div>
+  </div>
+</div>
+</div></section>
+<section class="band " id="runway"><div class="wrap">
+  <div class="head"><div><span class="kicker reveal">07 — Runway</span><h2 class="reveal">Runway pays<span class="l2">for the videos.</span></h2></div><p class="reveal d1">Startups burn cash on content. Here the runway share is the only thing that pays for a founder's videos, inside hard caps.</p></div>
+  <div class="grid g4" id="runwayCards">
+  <div class="card reveal"><small class="muted">Share of fees</small><h3 style="font-size:46px;margin-top:6px">35%</h3><p class="muted" style="margin:8px 0 0">of every startup's creator fees fund the runway.</p></div>
+  <div class="card reveal d1"><small class="muted">Per startup, per day</small><h3 style="font-size:46px;margin-top:6px" id="capStartup">—</h3><p class="muted" style="margin:8px 0 0">of Studio videos at most.</p></div>
+  <div class="card reveal d2"><small class="muted">Whole pad, per day</small><h3 style="font-size:46px;margin-top:6px" id="capGlobal">—</h3><p class="muted" style="margin:8px 0 0">so one startup can't drain the rest.</p></div>
+  <div class="card reveal d3"><small class="muted">Who can order</small><h3 style="font-size:46px;margin-top:6px">Founder</h3><p class="muted" style="margin:8px 0 0">only, with a signed message. Every order is logged.</p></div>
+</div>
+</div></section>
+<section class="band " id="demoday"><div class="wrap">
+  <div class="head"><div><span class="kicker reveal">08 — Demo Day</span><h2 class="reveal">Who's raising<span class="l2">right now.</span></h2></div><p class="reveal d1">The top startups on STARTUP by 24-hour volume, live.</p></div>
+  <div class="grid g3" id="top"></div><div style="margin-top:22px"><a class="btn" href="/startups">See every startup <span class="arrow">→</span></a></div>
+</div></section>
+<section class="band " id="faq"><div class="wrap">
+  <div class="head"><div><span class="kicker reveal">09 — FAQ</span><h2 class="reveal">Questions<span class="l2">founders ask.</span></h2></div></div>
+  <div class="faq"><details class="reveal"><summary>What is STARTUP?</summary><p>A launchpad for AI startups on pump.fun. You describe a startup in one sentence, an AI builds the company (name, ticker, tagline, pitch) and a fictional AI founder with a face, and you launch its coin from your own wallet. Every startup gets its own page, a founder who talks, funding rounds read live from the chart, and a Studio where the founder films videos with Higgsfield.</p></details>
+<details class="reveal"><summary>What does a launch cost?</summary><p>pump.fun's own launch cost (about 0.02 SOL), plus any dev buy you choose and PumpPortal's 0.5% fee on that buy, plus the network fee for the split transaction. STARTUP adds no fee of its own.</p></details>
+<details class="reveal"><summary>Where do the creator fees go?</summary><p>Each coin's pump.fun creator fees are split three ways: 30% to the burn wallet, which buys and burns $STARTUP; 35% to the runway wallet, which pays for that startup's Studio videos; 35% to the founder wallet that launched it.</p></details>
+<details class="reveal"><summary>Can anyone change the split later?</summary><p>No. The split is written with pump.fun's fee sharing in the second transaction of the launch, and that same transaction revokes the admin. After that pump.fun refuses any change, from the founder or from us. The split and its lock are read straight from chain on every startup page.</p></details>
+<details class="reveal"><summary>Is the founder a real person?</summary><p>No. Founders are AI-generated and fictional, and they are labelled AI everywhere they appear. Ideas about real people are refused.</p></details>
+<details class="reveal"><summary>How does the Studio work?</summary><p>The founder wallet picks a format and signs a short message. Higgsfield turns the founder's headshot into a short video. Every order goes into a ledger, and there is a daily cap per startup and across the whole pad.</p></details>
+<details class="reveal"><summary>What are the funding rounds?</summary><p>Labels for how far a startup has come, read live from its market cap: Garage at launch, Seed at $25K, IPO when it graduates off the pump.fun curve, Unicorn at $1M. They are not real funding.</p></details>
+<details class="reveal"><summary>Is this equity?</summary><p>No. These are memecoins, not shares. Holding one gives you no ownership, no revenue and no rights. Memecoins can go to zero. Nothing here is financial advice.</p></details>
+<details class="reveal"><summary>Is STARTUP part of pump.fun or Higgsfield?</summary><p>No. STARTUP is an independent site. It launches coins through pump.fun and makes videos through Higgsfield's public API.</p></details>
+<details class="reveal"><summary>Which wallets work?</summary><p>Phantom, Solflare and Backpack. You approve the launch once; both transactions are in that one prompt.</p></details></div><p class="fine reveal">STARTUP is independent and not affiliated with pump.fun or Higgsfield. Founders are AI-generated and fictional. Tokens launched here are memecoins with no intrinsic value or expectation of financial return, not equity or securities. Memecoins can go to zero. Nothing on this site is financial advice.</p>
+</div></section>
+</main>
+<script type="module" src="/js/home.js"></script>
+</body>
+</html>

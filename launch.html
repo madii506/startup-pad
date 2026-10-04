@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>STARTUP · Launch</title>
+<meta name="description" content="Describe a startup in one sentence. An AI builds the company and the founder; you launch its coin on pump.fun from your own wallet.">
+<meta property="og:title" content="STARTUP · Launch">
+<meta property="og:description" content="Describe a startup in one sentence. An AI builds the company and the founder; you launch its coin on pump.fun from your own wallet.">
+<meta property="og:image" content="https://startup-pad.vercel.app/assets/og.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://startup-pad.vercel.app/assets/og.png">
+<meta name="theme-color" content="#0D0E10">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/fav-32.png">
+<link rel="apple-touch-icon" href="/assets/fav-180.png">
+<link rel="preload" href="/assets/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/su.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"><i></i></div>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="/" aria-label="STARTUP home"><img src="/assets/mark-lime.svg" alt="" width="30" height="25">STARTUP</a>
+  <nav id="menu" aria-label="Main"><a href="/launch">Launch</a><a href="/startups">Demo Day</a><a href="/studio">Studio</a><a href="/docs">Docs</a></nav>
+  <div class="right"><a class="btn lime sm" href="/launch">Launch a startup</a><button class="btn sm menu" type="button" aria-controls="menu" aria-expanded="false">Menu</button></div>
+</div></header>
+<main id="main"><div class="wrap">
+  <div style="padding-top:clamp(28px,4vw,52px)"><span class="kicker">Launch</span><h1 style="font-size:clamp(46px,6.4vw,92px);margin-top:16px">Launch an AI startup.<span class="l2">With its own token.</span></h1><p class="powered">Powered by <a href="https://x.com/higgsfield_ai" target="_blank" rel="noopener">@higgsfield_ai</a></p></div>
+  <div class="stepnav" id="stepnav" role="tablist" aria-label="Launch steps">
+    <button type="button" data-go="1" aria-current="step"><i>1</i>Idea</button><button type="button" data-go="2" disabled><i>2</i>Company</button><button type="button" data-go="3" disabled><i>3</i>Logo &amp; founder</button><button type="button" data-go="4" disabled><i>4</i>Launch</button>
+  </div>
+  <div class="wiz">
+    <div>
+      <section class="panel on" data-step="1" aria-label="Idea">
+        <div class="card"><h2>Describe it</h2><p class="sub">One sentence. The AI turns it into a company, a pitch and a founder. You can edit everything after.</p>
+          <form class="kitform" id="ideaForm" autocomplete="off"><label class="sr" for="idea">Your one sentence</label><textarea id="idea" maxlength="200" placeholder="e.g. A dating app that matches founders with co-founders by vibe"></textarea>
+            <div class="chips" id="chips"></div>
+            <div class="nextrow"><span class="err" id="e1" role="alert"></span><button class="btn lime lg" type="submit" id="b1">Build my startup <span class="arrow">→</span></button></div></form></div>
+      </section>
+      <section class="panel" data-step="2" aria-label="Company">
+        <div class="card"><h2>The company</h2><p class="sub">This is what goes on-chain and on your startup page. The name becomes the ticker.</p>
+          <div class="cols two"><div class="field"><label for="fName">Name <small id="cName">0/32</small></label><input id="fName" maxlength="32"></div><div class="field"><label for="fTick">Ticker <small>2–10, A–Z 0–9</small></label><input id="fTick" maxlength="10"></div></div>
+          <div class="field" style="margin-top:14px"><label for="fTag">Tagline <small id="cTag">0/80</small></label><input id="fTag" maxlength="80"></div>
+          <div class="cols" style="margin-top:14px"><div class="field"><label for="fProb">Problem</label><textarea id="fProb" maxlength="140"></textarea></div><div class="field"><label for="fSol">Solution</label><textarea id="fSol" maxlength="140"></textarea></div><div class="field"><label for="fWhy">Why now</label><textarea id="fWhy" maxlength="140"></textarea></div></div>
+        </div>
+        <div class="card"><h2 style="font-size:clamp(28px,3vw,40px)">The AI founder</h2><p class="sub">Fictional, and labelled AI everywhere. Their bio and voice steer every line they write.</p>
+          <div class="cols two"><div class="field"><label for="fFn">Name</label><input id="fFn" maxlength="28"></div><div class="field"><label for="fFt">Title</label><input id="fFt" maxlength="32"></div></div>
+          <div class="field" style="margin-top:14px"><label for="fBio">Bio <small id="cBio">0/160</small></label><textarea id="fBio" maxlength="160"></textarea></div>
+          <div class="cols two" style="margin-top:14px"><div class="field"><label for="fVoice">Voice</label><input id="fVoice" maxlength="60"></div><div class="field"><label for="fX">X link <small>optional</small></label><input id="fX" maxlength="60" placeholder="https://x.com/yourstartup"></div></div>
+          <div class="field" style="margin-top:14px"><label for="fLook">Founder look <small>used for the headshot</small></label><textarea id="fLook" maxlength="160"></textarea></div>
+          <div class="nextrow"><button class="btn" type="button" id="regen">Rebuild from my sentence</button><button class="btn lime lg" type="button" id="b2">Next: visuals <span class="arrow">→</span></button></div><span class="err" id="e2" role="alert"></span>
+        </div>
+      </section>
+      <section class="panel" data-step="3" aria-label="Logo and founder">
+        <div class="card"><h2>Logo &amp; founder</h2><p class="sub">Generate both, regenerate until you like them, or upload your own.</p>
+          <div class="visual"><div class="frame" id="logoFrame">No logo yet</div><div><h4>Logo</h4><p>Becomes the coin image on pump.fun.</p><div class="field" style="margin-top:10px"><label for="fLogo">Logo idea</label><input id="fLogo" maxlength="200"></div><div class="btns"><button class="btn sm lime" type="button" id="genLogo">Generate</button><label class="btn sm" for="upLogo">Upload</label><input class="sr" type="file" id="upLogo" accept="image/png,image/jpeg,image/webp"></div></div></div>
+          <hr style="border:0;border-top:1px solid var(--line);margin:22px 0">
+          <div class="visual"><div class="frame round" id="faceFrame">No founder yet</div><div><h4>Founder headshot <span class="ai-tag">AI</span></h4><p>A fictional person. Used on the page and to film the Studio videos.</p><div class="btns"><button class="btn sm lime" type="button" id="genFace">Generate</button><label class="btn sm" for="upFace">Upload</label><input class="sr" type="file" id="upFace" accept="image/png,image/jpeg,image/webp"></div></div></div>
+          <div class="nextrow"><span class="err" id="e3" role="alert"></span><button class="btn lime lg" type="button" id="b3">Next: launch <span class="arrow">→</span></button></div>
+        </div>
+      </section>
+      <section class="panel" data-step="4" aria-label="Launch">
+        <div class="card"><h2>Launch on pump.fun</h2><p class="sub">Two transactions in one approval: create the coin, then lock the fee split.</p>
+          <div class="field"><label>Wallet</label><div class="wallets" id="wallets"></div></div>
+          <div class="field" style="margin-top:16px"><label for="fBuy">Dev buy <small>SOL, optional</small></label><div class="buys" id="buys"></div></div>
+          <div class="split-mini" id="splitMini"></div>
+          <p class="muted" style="font-size:14px;margin:0 0 14px">Costs: pump.fun's launch fee (about 0.02 SOL), your dev buy plus PumpPortal's 0.5% on it, and network fees. STARTUP adds nothing.</p>
+          <button class="btn lime lg" type="button" id="go" disabled>Launch</button>
+          <ol class="log" id="log" hidden></ol>
+          <div class="born" id="born" hidden></div>
+        </div>
+      </section>
+    </div>
+    <aside class="preview" aria-label="Preview">
+      <div class="card pv"><div class="cover"><img id="pvLogo" alt="" src="/assets/fav-180.png"></div><div class="body"><div class="nm" id="pvName">Your startup</div><div class="tk" id="pvTick">$TICKER · Garage</div><p class="tag" id="pvTag">Your tagline shows up here.</p>
+        <div class="fd" style="display:flex;gap:10px;align-items:center;padding-top:14px;border-top:1px solid var(--line)"><span id="pvFace" style="width:44px;height:44px;border-radius:50%;background:var(--panel2) center/cover;border:1px solid var(--line2)"></span><div><b id="pvFn">Your AI founder</b><div class="muted" style="font-size:13px" id="pvFt">AI founder &amp; CEO</div></div></div></div></div>
+      <p class="note">This is how your startup page will open. Founders are labelled AI.</p>
+    </aside>
+  </div>
+</div></main>
+<script type="module" src="/js/launch.js"></script>
+</body>
+</html>

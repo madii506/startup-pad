@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>STARTUP · Studio</title>
+<meta name="description" content="Founders film their startup content with Higgsfield.">
+<meta property="og:title" content="STARTUP · Studio">
+<meta property="og:description" content="Founders film their startup content with Higgsfield.">
+<meta property="og:image" content="https://startup-pad.vercel.app/assets/og.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://startup-pad.vercel.app/assets/og.png">
+<meta name="theme-color" content="#0D0E10">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/fav-32.png">
+<link rel="apple-touch-icon" href="/assets/fav-180.png">
+<link rel="preload" href="/assets/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/su.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"><i></i></div>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="/" aria-label="STARTUP home"><img src="/assets/mark-lime.svg" alt="" width="30" height="25">STARTUP</a>
+  <nav id="menu" aria-label="Main"><a href="/launch">Launch</a><a href="/startups">Demo Day</a><a href="/studio">Studio</a><a href="/docs">Docs</a></nav>
+  <div class="right"><a class="btn lime sm" href="/launch">Launch a startup</a><button class="btn sm menu" type="button" aria-controls="menu" aria-expanded="false">Menu</button></div>
+</div></header>
+<main id="main"><div class="wrap">
+  <div class="head" style="padding-top:clamp(28px,4vw,52px)"><div><span class="kicker">Studio</span><h1 style="font-size:clamp(46px,6.4vw,92px);margin-top:16px">Your founder<span class="l2">films the content.</span></h1></div><p>Pick one of your startups and a format. Higgsfield turns the founder headshot into a short video. Only the founder wallet can order.</p></div>
+  <div class="row" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px"><span class="pill" id="sEngine"><span class="dot"></span>Checking the engine…</span><span class="pill" id="sLedger"><span class="dot"></span>Checking the ledger…</span><span class="pill" id="sCaps">Caps —</span></div>
+  <div class="studio-grid">
+    <div class="card"><div class="sec-t"><h3>Your startups</h3></div><div class="wallets" id="sWallets"></div><div class="mine" id="mine" style="margin-top:14px"></div></div>
+    <div class="card"><div class="sec-t"><h3>Formats</h3></div><div class="grid g2" id="sFormats"></div>
+      <div class="nextrow"><span class="err" id="sErr" role="alert"></span><button class="btn lime lg" type="button" id="film" disabled>Film it</button></div>
+      <div class="job" id="job"></div>
+      <div style="margin-top:22px"><div class="sec-t"><h3 style="font-size:24px">Finished videos</h3></div><div class="vids" id="sVids"></div></div>
+    </div>
+  </div>
+</div></main>
+<script type="module" src="/js/studio.js"></script>
+</body>
+</html>

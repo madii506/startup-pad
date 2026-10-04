@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>STARTUP · Demo Day</title>
+<meta name="description" content="Every AI startup launched on STARTUP, live from chain.">
+<meta property="og:title" content="STARTUP · Demo Day">
+<meta property="og:description" content="Every AI startup launched on STARTUP, live from chain.">
+<meta property="og:image" content="https://startup-pad.vercel.app/assets/og.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://startup-pad.vercel.app/assets/og.png">
+<meta name="theme-color" content="#0D0E10">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/fav-32.png">
+<link rel="apple-touch-icon" href="/assets/fav-180.png">
+<link rel="preload" href="/assets/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/su.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"><i></i></div>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="/" aria-label="STARTUP home"><img src="/assets/mark-lime.svg" alt="" width="30" height="25">STARTUP</a>
+  <nav id="menu" aria-label="Main"><a href="/launch">Launch</a><a href="/startups">Demo Day</a><a href="/studio">Studio</a><a href="/docs">Docs</a></nav>
+  <div class="right"><a class="btn lime sm" href="/launch">Launch a startup</a><button class="btn sm menu" type="button" aria-controls="menu" aria-expanded="false">Menu</button></div>
+</div></header>
+<main id="main"><div class="wrap" style="padding-bottom:90px">
+  <div class="head" style="padding-top:clamp(28px,4vw,52px)"><div><span class="kicker">Demo Day</span><h1 style="font-size:clamp(46px,6.4vw,92px);margin-top:16px">Every startup.<span class="l2">Live from chain.</span></h1></div><p>Read straight from the STARTUP registry on Solana, with live market data. Nothing here is curated or paid for.</p></div>
+  <div class="toolbar"><label class="sr" for="q">Search startups</label><input type="search" id="q" placeholder="Search name, ticker or founder">
+    <div class="seg" role="group" aria-label="Sort"><button type="button" data-sort="vol" aria-pressed="true">24h volume</button><button type="button" data-sort="mcap" aria-pressed="false">Market cap</button><button type="button" data-sort="new" aria-pressed="false">Newest</button></div></div>
+  <div class="chips" id="roundChips" style="margin:0 0 20px"></div>
+  <div class="grid g3" id="list"></div>
+</div></main>
+<script type="module" src="/js/startups.js"></script>
+</body>
+</html>

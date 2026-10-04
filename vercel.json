@@ -1,0 +1,15 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [{ "source": "/s/:mint", "destination": "/s" }],
+  "functions": {
+    "api/build.js": { "maxDuration": 60 },
+    "api/art.js": { "maxDuration": 60 },
+    "api/kit.js": { "maxDuration": 30 },
+    "api/studio.js": { "maxDuration": 60 }
+  },
+  "headers": [
+    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] },
+    { "source": "/js/coin3d.js", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] }
+  ]
+}
