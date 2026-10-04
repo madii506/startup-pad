@@ -1,9 +1,19 @@
 // STARTUP on-chain helpers: the fee-split transaction (pump.fun fee sharing, admin revoked), account decoders, payouts.
 // Nothing here holds a key. Every transaction is returned unsigned and signed in the founder's own wallet.
 const W = require('@solana/web3.js');
-const { PUMP_SDK, OnlinePumpSdk, feeSharingConfigPda, bondingCurvePda, creatorVaultPda } = require('@pump-fun/pump-sdk');
-const { NATIVE_MINT, TOKEN_PROGRAM_ID } = require('@solana/spl-token');
 const L = require('./_lib');
+// the pump SDK is only needed to build transactions; load it lazily so reads never depend on it
+let SDK = null, SPL = null;
+function sdk() {
+  if (!SDK) { try { SDK = require('@pump-fun/pump-sdk'); SPL = require('@solana/spl-token'); } catch (e) { throw new Error('pump sdk unavailable: ' + String(e && e.message || e).slice(0, 200)); } }
+  return SDK;
+}
+const PUMP_ID = new W.PublicKey('6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P');
+const FEES_ID = new W.PublicKey('pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ');
+const pda = (seeds, prog) => W.PublicKey.findProgramAddressSync(seeds, prog)[0];
+const bondingCurvePda = mint => pda([Buffer.from('bonding-curve'), mint.toBuffer()], PUMP_ID);
+const feeSharingConfigPda = mint => pda([Buffer.from('sharing-config'), mint.toBuffer()], FEES_ID);
+const creatorVaultPda = creator => pda([Buffer.from('creator-vault'), creator.toBuffer()], PUMP_ID);
 const C = require('./_cfg');
 
 const MEMO = new W.PublicKey('MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr');
@@ -39,6 +49,7 @@ function regIx(payer) {
 async function splitTx({ founder, mint, founderCid, blockhash }) {
   const f = new W.PublicKey(founder), m = new W.PublicKey(mint);
   const holders = shares(founder).map(s => ({ address: new W.PublicKey(s.address), shareBps: s.bps }));
+  const { PUMP_SDK } = sdk(); const { NATIVE_MINT, TOKEN_PROGRAM_ID } = SPL;
   const ixs = [
     W.ComputeBudgetProgram.setComputeUnitLimit({ units: 300000 }),
     W.ComputeBudgetProgram.setComputeUnitPrice({ microLamports: 150000 }),
@@ -101,7 +112,7 @@ async function chainState(mints) {
 // permissionless payout of a startup's creator fees to its shareholders (works before and after graduation)
 async function payoutTx({ payer, mint }) {
   const conn = new W.Connection(RPC_URL, 'confirmed');
-  const online = new OnlinePumpSdk(conn);
+  const online = new (sdk().OnlinePumpSdk)(conn);
   const res = await online.buildDistributeCreatorFeesInstructions(new W.PublicKey(mint), { payer: new W.PublicKey(payer) });
   const ixs = Array.isArray(res) ? res : (res.instructions || []);
   if (!ixs.length) throw new Error('nothing to pay out yet');
